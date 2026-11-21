@@ -1,0 +1,56 @@
+# USB Baiting Risk Analysis: The Parking Lot USB
+
+A security analysis of a simulated USB baiting scenario, written from both the attacker's and the defender's point of view.
+
+> **Note:** This is a training exercise from the Google Cybersecurity Certificate (Coursera). The hospital, the employee, and the files are fictional.
+
+## Scenario
+
+A security analyst finds a USB drive with the hospital's logo in the parking lot. Inside a safe virtual environment, the drive turns out to belong to the hospital's HR manager, Jorge Bailey. The goal: assess the risks.
+
+## 1. Contents
+
+The drive holds a mix of personal and work files:
+
+- **Personal:** family photos, vacation ideas, wedding list, résumé
+- **Work:** new hire letter, shift schedules, employee budget
+
+Key observations:
+
+- Family information counts as **PII (personally identifiable information)**.
+- Many of the work files are highly sensitive, especially the employee budget.
+- Keeping work files and personal files on the same drive is never safe.
+
+## 2. Attacker mindset
+
+- The information could be used against Jorge and other employees. Not only the hospital staff are affected, but also Jorge's relatives.
+- The USB could contain malware that detects the computer once it is plugged in. An attacker could then steal information, copying the computer's memory, including passwords, encryption keys, and other sensitive data, onto the drive.
+
+## 3. Risk analysis
+
+**Malware that could be hidden on the drive**
+
+- **Viruses and worms:** self-replicating code that spreads from the USB drive to the computer, and then to other drives plugged into it.
+- **Trojans:** files that look harmless, like a document or a photo, but run malicious code when opened. The attacker may also have placed these files as a distraction.
+- **Spyware and keyloggers:** software that quietly records what you type and do, then sends it to the attacker. This is very dangerous because the attacker can capture passwords and other sensitive information.
+
+**If the files are real (not placed by an attacker as a distraction)**
+
+- **Employee budget:** shows salaries, spending, and financial priorities. Attackers can use it to craft convincing fake invoices (business email compromise), identify who handles money, or target underpaid employees who might be bribed.
+- **Employee names and roles:** let an attacker impersonate coworkers or managers in phishing emails that look legitimate.
+- **Family photos:** reveal who Jorge's family members are, where they live, what they look like, and where they go. Attackers can use this for social engineering, impersonation, or threats and pressure ("we know your children's school").
+
+## Key takeaways
+
+- Curiosity is the attack. The weakest point is the human, not the computer.
+- A drive can be dangerous even without malware, because its data alone can fuel targeted attacks.
+- Personal and work data should never be mixed on one device.
+
+## Skills demonstrated
+
+Attack surface and attack vector analysis · Threat modeling · Social engineering awareness · PII and data-handling risk · Malware identification
+
+## Credit
+
+Scenario and template: Google Cybersecurity Certificate, *Assets, Threats, and Vulnerabilities* (Coursera). 
+Analysis and write-up: Mostafa Soly.
